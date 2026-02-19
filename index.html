@@ -1,165 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-  <title>Learn Your Way — Cyber Safety</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Your Way — Cyber Safety</title>
+<style>
+  body { margin:0; font-family:'Nunito','Poppins',sans-serif; line-height:1.6; background:#FDF6EC; color:#333; }
+  .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:40vh; background:linear-gradient(135deg,#A3C4F3,#4DB6AC); color:#fff; padding:2rem; }
+  .hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+  .hero p { font-size:1.2rem; }
+  .learning-ways { padding:2rem; text-align:center; }
+  .learning-ways h2 { font-size:2rem; margin-bottom:1.5rem; }
+  .ways-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
+  .way-card { background:white; padding:1rem; border-radius:12px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); cursor:pointer; transition:transform 0.3s ease, box-shadow 0.3s ease; }
+  .way-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
+  .way-card h3 { margin-top:0.5rem; }
+  .way-img { width:80px; height:80px; margin-bottom:0.5rem; object-fit:cover; }
+  .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.6); }
+  .modal-content { background:#fff; margin:15% auto; padding:2rem; border-radius:12px; width:90%; max-width:500px; text-align:center; position:relative; }
+  .close { position:absolute; top:15px; right:20px; font-size:1.5rem; font-weight:bold; cursor:pointer; }
+  iframe, audio { margin-top:10px; width:100%; }
+  img.visual { width:100%; max-width:400px; margin-top:10px; border-radius:8px; }
+</style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Learn Your Way</h1>
-    <p>Explore Cyber Safety through reading, video, audio, visuals, and practice.</p>
-  </section>
+<!-- Hero -->
+<section class="hero">
+  <h1>Learn Your Way</h1>
+  <p>Explore Cyber Safety through reading, video, audio, visuals, and practice.</p>
+</section>
 
-  <!-- Learning Ways -->
-  <section class="learning-ways">
-    <h2>Five Ways to Learn ICT — Cyber Safety</h2>
-    <div class="ways-grid">
+<!-- Learning Ways -->
+<section class="learning-ways">
+  <h2>Five Ways to Learn ICT — Cyber Safety</h2>
+  <div class="ways-grid">
+    <div class="way-card" data-modal="read"><h3>Read</h3></div>
+    <div class="way-card" data-modal="video"><h3>Video</h3></div>
+    <div class="way-card" data-modal="audio"><h3>Audio</h3></div>
+    <div class="way-card" data-modal="visuals"><h3>Visuals</h3></div>
+    <div class="way-card" data-modal="practice"><h3>Practice</h3></div>
+  </div>
+</section>
 
-      <div class="way-card" data-modal="read">
-        <h3>Read</h3>
-      </div>
+<!-- Modals -->
+<div id="read" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Read — Cyber Safety Basics</h2>
+    <p>Cyber safety is protecting your personal information, devices, and online accounts from threats. Learn about:</p>
+    <ul>
+      <li>Strong, unique passwords</li>
+      <li>Recognizing phishing and scams</li>
+      <li>Safe social media habits</li>
+      <li>Updating software regularly</li>
+      <li>Protecting personal data</li>
+    </ul>
+  </div>
+</div>
 
-      <div class="way-card" data-modal="video">
-        <h3>Video</h3>
-      </div>
+<div id="video" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Video — Cyber Safety</h2>
+    <iframe height="200" src="https://www.youtube.com/embed/eQG1zF6PsMA" frameborder="0" allowfullscreen></iframe>
+    <p>This YouTube video covers essential Cyber Safety tips and practices.</p>
+  </div>
+</div>
 
-      <div class="way-card" data-modal="audio">
-        <h3>Audio</h3>
-      </div>
+<div id="audio" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Audio — Cyber Safety Tips</h2>
+    <p>Listen to a short audio lesson about Cyber Safety:</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+    <p>Focus on keeping accounts secure and browsing safely online.</p>
+  </div>
+</div>
 
-      <div class="way-card" data-modal="visuals">
-        <h3>Visuals</h3>
-      </div>
+<div id="visuals" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Visuals — Cyber Safety Diagram</h2>
+    <img class="visual" src="https://img.icons8.com/ios/250/security-shield.png" alt="Cyber Safety Shield">
+    <p>Visuals help you remember important cybersecurity concepts.</p>
+  </div>
+</div>
 
-      <div class="way-card" data-modal="practice">
-        <h3>Practice</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Modals -->
-
-  <!-- READ -->
-  <div id="read" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Read — Cyber Safety Basics</h2>
-      <p>
-        Cyber safety refers to protecting personal information, devices, and online accounts from digital threats. Key areas include:
+<div id="practice" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Practice — Cyber Safety Quiz</h2>
+    <ol>
+      <li>What makes a password strong?
         <ul>
-          <li>Strong, unique passwords</li>
-          <li>Recognizing phishing and scams</li>
-          <li>Safe social media habits</li>
-          <li>Updating software to prevent vulnerabilities</li>
-          <li>Protecting personal data online</li>
+          <li>A simple name</li>
+          <li>Short date of birth</li>
+          <li>Mix of letters, numbers & symbols ✔️</li>
         </ul>
-      </p>
-      <p>Understanding cyber safety helps you stay secure while using the internet for learning, communication, and entertainment.</p>
-    </div>
+      </li>
+      <li>Which is a sign of phishing?
+        <ul>
+          <li>Misspelled URL ✔️</li>
+          <li>Message from friend with no link</li>
+          <li>Secure website warning</li>
+        </ul>
+      </li>
+      <li>What should you never share online?
+        <ul>
+          <li>Your favorite color</li>
+          <li>Your full home address ✔️</li>
+          <li>Your pet’s name</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Keep practicing safe online habits!</p>
   </div>
+</div>
 
-  <!-- VIDEO -->
-  <div id="video" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Video — Cyber Safety Explained</h2>
-      <iframe width="100%" height="200"
-        src="https://www.youtube.com/embed/eQG1zF6PsMA"
-        title="Cyber Safety Video Lesson"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard‑write; encrypted‑media; gyroscope; picture‑in‑picture"
-        allowfullscreen>
-      </iframe>
-      <p>This video provides key tips on staying safe online, avoiding scams, and protecting your data.</p>
-    </div>
-  </div>
+<script>
+  const cards = document.querySelectorAll('.way-card');
+  const modals = document.querySelectorAll('.modal');
+  const closeBtns = document.querySelectorAll('.close');
 
-  <!-- AUDIO -->
-  <div id="audio" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Audio — Cyber Safety Tips</h2>
-      <p>Listen to this Cyber Safety lesson:</p>
-      <audio controls>
-        <source src="https://cdn.fbsbx.com/.../cyber_safety_lesson.mp3" type="audio/mpeg">
-        Your browser does not support audio.
-      </audio>
-      <p>Audio lessons help reinforce key safety principles when browsing the web or using apps.</p>
-    </div>
-  </div>
-
-  <!-- VISUALS -->
-  <div id="visuals" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Visuals — Cyber Safety Diagrams</h2>
-      <img src="https://img.icons8.com/ios/250/security‑shield.png" alt="Cyber Shield" class="visual">
-      <p>Use visual diagrams like this to remember important cybersecurity concepts.</p>
-    </div>
-  </div>
-
-  <!-- PRACTICE -->
-  <div id="practice" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Practice — Cyber Safety Quiz</h2>
-      <p>Test your knowledge:</p>
-      <ol>
-        <li>What makes a password strong?
-          <ul>
-            <li>A simple name</li>
-            <li>Short date of birth</li>
-            <li>Mix of letters, numbers & symbols ✔️</li>
-          </ul>
-        </li>
-        <li>Which one is a sign of a phishing message?
-          <ul>
-            <li>Misspelled URL ✔️</li>
-            <li>Message from friend with no link</li>
-            <li>Secure website warning</li>
-          </ul>
-        </li>
-        <li>What should you never share online?
-          <ul>
-            <li>Your favorite color</li>
-            <li>Your full home address ✔️</li>
-            <li>Your pet’s name</li>
-          </ul>
-        </li>
-      </ol>
-      <p>Good job! Keep practicing safe habits.</p>
-    </div>
-  </div>
-
-  <script>
-    const cards = document.querySelectorAll('.way-card');
-    const modals = document.querySelectorAll('.modal');
-    const closeBtns = document.querySelectorAll('.close');
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        const id = card.dataset.modal;
-        document.getElementById(id).style.display = "block";
-      });
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      document.getElementById(card.dataset.modal).style.display="block";
     });
+  });
 
-    closeBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = "none";
-      });
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal').style.display="none";
     });
+  });
 
-    window.addEventListener('click', e => {
-      modals.forEach(modal => {
-        if (e.target === modal) modal.style.display = "none";
-      });
-    });
-  </script>
-
+  window.addEventListener('click', e => {
+    modals.forEach(modal => { if(e.target===modal) modal.style.display="none"; });
+  });
+</script>
 </body>
 </html>
