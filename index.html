@@ -3,144 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn Your Way — Cyber Safety</title>
-<style>
-  body { margin:0; font-family:'Nunito','Poppins',sans-serif; line-height:1.6; background:#FDF6EC; color:#333; }
-  .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:40vh; background:linear-gradient(135deg,#A3C4F3,#4DB6AC); color:#fff; padding:2rem; }
-  .hero h1 { font-size:2.5rem; margin-bottom:1rem; }
-  .hero p { font-size:1.2rem; }
-  .learning-ways { padding:2rem; text-align:center; }
-  .learning-ways h2 { font-size:2rem; margin-bottom:1.5rem; }
-  .ways-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1rem; }
-  .way-card { background:white; padding:1rem; border-radius:12px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); cursor:pointer; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-  .way-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.15); }
-  .way-card h3 { margin-top:0.5rem; }
-  .way-img { width:80px; height:80px; margin-bottom:0.5rem; object-fit:cover; }
-  .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.6); }
-  .modal-content { background:#fff; margin:15% auto; padding:2rem; border-radius:12px; width:90%; max-width:500px; text-align:center; position:relative; }
-  .close { position:absolute; top:15px; right:20px; font-size:1.5rem; font-weight:bold; cursor:pointer; }
-  iframe, audio { margin-top:10px; width:100%; }
-  img.visual { width:100%; max-width:400px; margin-top:10px; border-radius:8px; }
-</style>
+<title>Learn Your Way - Cyber Safety</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Hero -->
-<section class="hero">
-  <h1>Learn Your Way</h1>
-  <p>Explore Cyber Safety through reading, video, audio, visuals, and practice.</p>
-</section>
-
-<!-- Learning Ways -->
-<section class="learning-ways">
-  <h2>Five Ways to Learn ICT — Cyber Safety</h2>
-  <div class="ways-grid">
-    <div class="way-card" data-modal="read"><h3>Read</h3></div>
-    <div class="way-card" data-modal="video"><h3>Video</h3></div>
-    <div class="way-card" data-modal="audio"><h3>Audio</h3></div>
-    <div class="way-card" data-modal="visuals"><h3>Visuals</h3></div>
-    <div class="way-card" data-modal="practice"><h3>Practice</h3></div>
-  </div>
-</section>
-
-<!-- Modals -->
-<div id="read" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Read — Cyber Safety Basics</h2>
-    <p>Cyber safety is protecting your personal information, devices, and online accounts from threats. Learn about:</p>
-    <ul>
-      <li>Strong, unique passwords</li>
-      <li>Recognizing phishing and scams</li>
-      <li>Safe social media habits</li>
-      <li>Updating software regularly</li>
-      <li>Protecting personal data</li>
-    </ul>
-  </div>
+<!-- Sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="learning.html">Learning Ways</a>
+  <a href="#contact">Contact Support</a>
 </div>
 
-<div id="video" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Video — Cyber Safety</h2>
-    <iframe height="200" src="https://www.youtube.com/embed/eQG1zF6PsMA" frameborder="0" allowfullscreen></iframe>
-    <p>This YouTube video covers essential Cyber Safety tips and practices.</p>
-  </div>
+<!-- Main Content -->
+<div class="main">
+  <section class="hero">
+    <h1>Welcome to Learn Your Way</h1>
+    <p>Your student-centered Cyber Safety learning platform</p>
+    <a href="learning.html" style="margin-top:1rem; display:inline-block; padding:0.75rem 1.5rem; background:#F6D55C; color:#333; border-radius:8px; font-weight:bold;">Get Started</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Support</h2>
+    <p>If you need help or have questions, email us at <a href="mailto:support@learnyourway.com">support@learnyourway.com</a>.</p>
+  </section>
 </div>
 
-<div id="audio" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Audio — Cyber Safety Tips</h2>
-    <p>Listen to a short audio lesson about Cyber Safety:</p>
-    <audio controls>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
-    <p>Focus on keeping accounts secure and browsing safely online.</p>
-  </div>
-</div>
-
-<div id="visuals" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Visuals — Cyber Safety Diagram</h2>
-    <img class="visual" src="https://img.icons8.com/ios/250/security-shield.png" alt="Cyber Safety Shield">
-    <p>Visuals help you remember important cybersecurity concepts.</p>
-  </div>
-</div>
-
-<div id="practice" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Practice — Cyber Safety Quiz</h2>
-    <ol>
-      <li>What makes a password strong?
-        <ul>
-          <li>A simple name</li>
-          <li>Short date of birth</li>
-          <li>Mix of letters, numbers & symbols ✔️</li>
-        </ul>
-      </li>
-      <li>Which is a sign of phishing?
-        <ul>
-          <li>Misspelled URL ✔️</li>
-          <li>Message from friend with no link</li>
-          <li>Secure website warning</li>
-        </ul>
-      </li>
-      <li>What should you never share online?
-        <ul>
-          <li>Your favorite color</li>
-          <li>Your full home address ✔️</li>
-          <li>Your pet’s name</li>
-        </ul>
-      </li>
-    </ol>
-    <p>Keep practicing safe online habits!</p>
-  </div>
-</div>
-
-<script>
-  const cards = document.querySelectorAll('.way-card');
-  const modals = document.querySelectorAll('.modal');
-  const closeBtns = document.querySelectorAll('.close');
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      document.getElementById(card.dataset.modal).style.display="block";
-    });
-  });
-
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.modal').style.display="none";
-    });
-  });
-
-  window.addEventListener('click', e => {
-    modals.forEach(modal => { if(e.target===modal) modal.style.display="none"; });
-  });
-</script>
 </body>
 </html>
