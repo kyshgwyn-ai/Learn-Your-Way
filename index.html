@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn Your Way - Cyber Safety</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Your Way</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <a href="index.html">Home</a>
-  <a href="learning.html">Learning Ways</a>
-  <a href="#contact">Contact Support</a>
+<header>
+  <div class="logo">Learn Your Way</div>
+  <nav>
+    <a href="#formats">Formats</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#support">Support</a>
+  </nav>
+  <div>
+    <button class="btn outline" onclick="toggleDarkMode()">🌙</button>
+    <button class="btn primary" onclick="openModal()">Login</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Your Learning, <span>Your Pace</span></h1>
+  <p>Empowering students to learn in the way that works best for them.</p>
+  <button class="btn primary" onclick="increaseProgress()">Start Learning</button>
+</section>
+
+<section id="formats">
+  <h2 class="section-title">Learning Formats</h2>
+  <div class="grid">
+    <div class="card">Reading</div>
+    <div class="card">Video</div>
+    <div class="card">Audio</div>
+    <div class="card">Interactive</div>
+  </div>
+</section>
+
+<section id="dashboard">
+  <h2 class="section-title">Dashboard</h2>
+  <div class="dashboard">
+    <h3>Welcome, <span id="userDisplay">Student</span></h3>
+    <p>Progress:</p>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <p id="progressText">0%</p>
+  </div>
+</section>
+
+<section id="support">
+  <h2 class="section-title">Contact Support</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit" class="btn primary">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Learn Your Way | Advanced E-TECH Project
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="authModal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Login</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button class="btn primary" onclick="login()">Submit</button>
+    <p onclick="switchMode()" class="switch">No account? Register</p>
+  </div>
 </div>
 
-<!-- Main Content -->
-<div class="main">
-  <section class="hero">
-    <h1>Welcome to Learn Your Way</h1>
-    <p>Your student-centered Cyber Safety learning platform</p>
-    <a href="learning.html" style="margin-top:1rem; display:inline-block; padding:0.75rem 1.5rem; background:#F6D55C; color:#333; border-radius:8px; font-weight:bold;">Get Started</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Support</h2>
-    <p>If you need help or have questions, email us at <a href="mailto:support@learnyourway.com">support@learnyourway.com</a>.</p>
-  </section>
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>
