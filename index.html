@@ -2,13 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Learn Your Way</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Your Way - ICT Connected</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Learn Your Way</h1>
-  <p>ICT-Connected Learning Website</p>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Learning Your Way</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#learning-ways">Learning Ways</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn btn-primary"><a href="#learning-ways">Start Learning</a></button>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Learning Your Way</h1>
+      <p>Explore the five ways to learn ICT effectively: Read, Watch, Listen, Visualize, Practice.</p>
+      <button class="btn btn-cta"><a href="#learning-ways">Learn More</a></button>
+    </div>
+  </section>
+
+  <!-- Learning Ways Section -->
+  <section id="learning-ways" class="learning-ways">
+    <h2>Five Ways to Learn</h2>
+    <p class="section-subtitle">
+      Click each learning method to see its ICT content.
+    </p>
+    <div class="ways-grid">
+      <div class="way-card" data-modal="read">
+        <h3>Read</h3>
+        <p>Click to view content</p>
+      </div>
+      <div class="way-card" data-modal="watch">
+        <h3>Watch</h3>
+        <p>Click to view content</p>
+      </div>
+      <div class="way-card" data-modal="listen">
+        <h3>Listen</h3>
+        <p>Click to view content</p>
+      </div>
+      <div class="way-card" data-modal="visualize">
+        <h3>Visualize</h3>
+        <p>Click to view content</p>
+      </div>
+      <div class="way-card" data-modal="practice">
+        <h3>Practice</h3>
+        <p>Click to view content</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Popups -->
+  <div class="modal" id="read">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Read</h3>
+      <p>Study ICT theory, digital literacy, and computer fundamentals through interactive ebooks and guides.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="watch">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Watch</h3>
+      <p>Learn ICT concepts with tutorial videos, animations, and recorded lectures on programming and software tools.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="listen">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Listen</h3>
+      <p>Understand ICT topics via podcasts, audio lessons, and discussions on emerging technology trends.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="visualize">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Visualize</h3>
+      <p>Use diagrams, flowcharts, and interactive simulations to comprehend ICT processes and problem-solving steps.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="practice">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Practice</h3>
+      <p>Apply ICT skills in coding exercises, software projects, and digital activities to reinforce learning.</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About This Program</h2>
+    <p>This ICT learning program integrates multiple ways of learning to develop digital skills, critical thinking, and future-ready competencies for students.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
