@@ -1,111 +1,35 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
 
-body {
-  line-height: 1.6;
-  color: #333;
-}
+// Modal functionality
+const cards = document.querySelectorAll('.way-card');
+const modals = document.querySelectorAll('.modal');
+const closeBtns = document.querySelectorAll('.close');
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const modalId = card.dataset.modal;
+    document.getElementById(modalId).style.display = 'block';
+  });
+});
 
-.nav-links {
-  list-style: none;
-}
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.modal').style.display = 'none';
+  });
+});
 
-.nav-links li {
-  display: inline;
-  margin-left: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-cta a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Hero */
-.hero {
-  height: 90vh;
-  background: linear-gradient(135deg, #74ebd5, #9face6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  margin-bottom: 1.5rem;
-}
-
-/* Learning Ways */
-.learning-ways {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.learning-ways h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  color: #555;
-}
-
-.ways-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
+window.addEventListener('click', e => {
+  modals.forEach(modal => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+});
 .way-card {
   background: white;
   padding: 1.5rem;
