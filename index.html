@@ -94,7 +94,7 @@
       margin: 15% auto;
       padding: 2rem;
       border-radius: 12px;
-      width: 80%;
+      width: 90%;
       max-width: 500px;
       text-align: center;
       position: relative;
@@ -107,6 +107,18 @@
       font-size: 1.5rem;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    iframe, audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    img.visual {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 10px;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -146,53 +158,93 @@
   </section>
 
   <!-- Modals -->
+
+  <!-- Read -->
   <div id="read" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Read: Being an Information Literate Citizen</h2>
       <p>
-        Students explore ICT content responsibly, analyze sources, and evaluate information critically. Topics include:
+        Learn to analyze and evaluate information critically. Topics include:
         <ul>
-          <li>Identifying credible sources online</li>
+          <li>Identifying credible online sources</li>
           <li>Understanding copyright and plagiarism</li>
-          <li>Ethical use of digital information</li>
+          <li>Responsible digital communication</li>
+          <li>Evaluating online news and social media information</li>
         </ul>
       </p>
     </div>
   </div>
 
+  <!-- Video -->
   <div id="video" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Video: Empowerment in Technology</h2>
-      <p>Visual lessons show how ICT empowers students to solve problems and communicate effectively online.</p>
+      <iframe height="200" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Empowerment in Technology" frameborder="0" allowfullscreen>
+      </iframe>
+      <p>This video demonstrates how technology empowers students to solve problems, collaborate online, and access knowledge globally.</p>
     </div>
   </div>
 
+  <!-- Audio -->
   <div id="audio" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Audio: Digital Citizenship</h2>
-      <p>Listen to tutorials about safe and responsible use of technology in learning and collaboration.</p>
+      <p>Listen to this lesson on safe and responsible use of technology:</p>
+      <audio controls>
+        <source src="audio/digital_citizenship.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p>Focus on privacy, online etiquette, and cyber safety.</p>
     </div>
   </div>
 
+  <!-- Visuals -->
   <div id="visuals" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Visuals: ICT Concepts</h2>
-      <p>Interactive charts and diagrams help students understand networks, coding basics, and digital tools visually.</p>
+      <p>Interactive diagrams and charts illustrate ICT concepts:</p>
+      <img src="icons/network_diagram.png" alt="Network Diagram" class="visual">
+      <img src="icons/coding_flowchart.png" alt="Coding Flowchart" class="visual">
     </div>
   </div>
 
+  <!-- Practice -->
   <div id="practice" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Practice: Apply Your Knowledge</h2>
-      <p>Quizzes, coding exercises, and drag-and-drop tasks let students apply ICT concepts immediately in a safe environment.</p>
+      <p>Test your knowledge with this short quiz:</p>
+      <ol>
+        <li>Which website is considered credible?  
+          <ul>
+            <li>Random blog post</li>
+            <li>Educational institution ✔️</li>
+            <li>Social media post</li>
+          </ul>
+        </li>
+        <li>What is plagiarism?  
+          <ul>
+            <li>Copying content without credit ✔️</li>
+            <li>Writing your own notes</li>
+          </ul>
+        </li>
+        <li>Which is safe online behavior?  
+          <ul>
+            <li>Sharing passwords</li>
+            <li>Using strong, unique passwords ✔️</li>
+          </ul>
+        </li>
+      </ol>
     </div>
   </div>
 
+  <!-- Script for modal interactivity -->
   <script>
     const cards = document.querySelectorAll('.way-card');
     const modals = document.querySelectorAll('.modal');
