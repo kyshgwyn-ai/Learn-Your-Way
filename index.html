@@ -3,65 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning Your Way - ICT Connected</title>
+  <title>Learn Your Way - ICT Connected</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <div class="logo">Learning Your Way</div>
+      <div class="logo">Learn Your Way</div>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#learning-ways">Learning Ways</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="btn btn-primary"><a href="#learning-ways">Start Learning</a></button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1>Learning Your Way</h1>
-      <p>Explore the five ways to learn ICT effectively: Read, Watch, Listen, Visualize, Practice.</p>
-      <button class="btn btn-cta"><a href="#learning-ways">Learn More</a></button>
+      <h1>Learn Your Way – Your Learning, Your Pace</h1>
+      <p>A student-centered, adaptive ICT learning platform prioritizing personalized learning experiences over traditional grading.</p>
+      <button class="btn btn-cta"><a href="#learning-ways">Explore Learning Ways</a></button>
     </div>
   </section>
 
   <!-- Learning Ways Section -->
   <section id="learning-ways" class="learning-ways">
     <h2>Five Ways to Learn</h2>
-    <p class="section-subtitle">
-      Click each learning method to see its ICT lesson content.
-    </p>
+    <p class="section-subtitle">Click each learning method to explore ICT content designed for you.</p>
     <div class="ways-grid">
+
       <div class="way-card" data-modal="read">
+        <img src="icons/read.png" alt="Read Icon">
         <h3>Read</h3>
         <p>Click to view content</p>
       </div>
-      <div class="way-card" data-modal="watch">
-        <h3>Watch</h3>
+
+      <div class="way-card" data-modal="video">
+        <img src="icons/video.png" alt="Video Icon">
+        <h3>Video</h3>
         <p>Click to view content</p>
       </div>
-      <div class="way-card" data-modal="listen">
-        <h3>Listen</h3>
+
+      <div class="way-card" data-modal="audio">
+        <img src="icons/audio.png" alt="Audio Icon">
+        <h3>Audio</h3>
         <p>Click to view content</p>
       </div>
-      <div class="way-card" data-modal="visualize">
-        <h3>Visualize</h3>
+
+      <div class="way-card" data-modal="visuals">
+        <img src="icons/visuals.png" alt="Visuals Icon">
+        <h3>Visuals</h3>
         <p>Click to view content</p>
       </div>
+
       <div class="way-card" data-modal="practice">
+        <img src="icons/practice.png" alt="Practice Icon">
         <h3>Practice</h3>
         <p>Click to view content</p>
       </div>
+
     </div>
   </section>
 
-  <!-- Modal Popups -->
+  <!-- Modals -->
   <div class="modal" id="read">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -70,27 +79,27 @@
     </div>
   </div>
 
-  <div class="modal" id="watch">
+  <div class="modal" id="video">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h3>Watch</h3>
-      <p>Empowerment: Learn how ICT empowers individuals and communities to communicate, collaborate, and achieve goals.</p>
+      <h3>Video</h3>
+      <p>Empowerment: Watch bite-sized lessons showing how ICT empowers individuals and communities for communication, collaboration, and growth.</p>
     </div>
   </div>
 
-  <div class="modal" id="listen">
+  <div class="modal" id="audio">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h3>Listen</h3>
-      <p>Technology Topic: Stay updated on current ICT topics such as emerging technologies, cybersecurity, and digital trends.</p>
+      <h3>Audio</h3>
+      <p>Technology Topics: Listen to lessons and tutorials on emerging technologies, cybersecurity, and digital literacy.</p>
     </div>
   </div>
 
-  <div class="modal" id="visualize">
+  <div class="modal" id="visuals">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h3>Visualize</h3>
-      <p>Being an Information Literate: Use diagrams, charts, and visuals to understand how information flows in digital systems.</p>
+      <h3>Visuals</h3>
+      <p>Being an Information Literate: Diagrams, flowcharts, and interactive visuals help you understand ICT processes clearly.</p>
     </div>
   </div>
 
@@ -98,22 +107,22 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h3>Practice</h3>
-      <p>Technology Topic: Apply your ICT skills in practical exercises, projects, and simulations to reinforce learning.</p>
+      <p>Technology Topics: Apply ICT skills with quizzes, coding exercises, and interactive drag-and-drop activities.</p>
     </div>
   </div>
 
   <!-- About Section -->
   <section id="about" class="about">
-    <h2>About This Program</h2>
-    <p>This ICT learning program integrates multiple ways of learning to develop digital skills, critical thinking, and future-ready competencies for students.</p>
+    <h2>About This Platform</h2>
+    <p>“Learn Your Way” is a student-centered ICT learning platform emphasizing adaptive, personalized learning experiences. Students choose how they learn, while the platform tracks habits and recommends content without using grades or scores. Visual, auditory, and independent learners are all supported equally.</p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message"></textarea>
       <button class="btn btn-primary">Send Message</button>
     </form>
