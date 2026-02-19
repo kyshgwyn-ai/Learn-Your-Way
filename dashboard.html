@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Learn Your Way</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 id="welcome"></h2>
+    <button onclick="showModule(1)">Module 1</button>
+    <button onclick="showModule(2)">Module 2</button>
+    <button onclick="showModule(3)">Module 3</button>
+    <button onclick="showModule(4)">Module 4</button>
+    <button onclick="showModule(5)">Module 5</button>
+    <div class="progress-box">
+      <p>Learning Streak 🔥</p>
+      <span id="streak"></span>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <h1 id="moduleTitle"></h1>
+
+    <!-- Format Buttons -->
+    <div class="formats">
+      <button onclick="showFormat('read')">📖 Read</button>
+      <button onclick="showFormat('watch')">🎥 Watch</button>
+      <button onclick="showFormat('audio')">🎧 Listen</button>
+      <button onclick="showFormat('visual')">🖼 Visual</button>
+      <button onclick="showFormat('practice')">📝 Practice</button>
+    </div>
+
+    <!-- READ -->
+    <div id="read" class="format-section"></div>
+
+    <!-- WATCH -->
+    <div id="watch" class="format-section hidden">
+      <iframe width="100%" height="400"
+      src="https://www.youtube.com/embed/7_LPdttKXPc"
+      allowfullscreen></iframe>
+    </div>
+
+    <!-- AUDIO -->
+    <div id="audio" class="format-section hidden">
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+      </audio>
+    </div>
+
+    <!-- VISUAL -->
+    <div id="visual" class="format-section hidden image-grid"></div>
+
+    <!-- PRACTICE -->
+    <div id="practice" class="format-section hidden">
+      <div id="practiceContent"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
