@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice — Cyber Safety Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="learning.html">Learning Ways</a>
+  <a href="#contact">Contact Support</a>
+</div>
+
+<div class="main">
+  <h2>Practice — Cyber Safety Quiz</h2>
+  <p>Select the correct answers and click Submit to see your score.</p>
+
+  <form id="quizForm">
+    <ol>
+      <li>
+        What makes a strong password?<br>
+        <input type="checkbox" name="q1" value="wrong1"> Your pet’s name<br>
+        <input type="checkbox" name="q1" value="correct"> Mix of letters, numbers & symbols<br>
+        <input type="checkbox" name="q1" value="wrong2"> Your birthdate<br>
+      </li>
+      <li>
+        Which is a sign of phishing?<br>
+        <input type="checkbox" name="q2" value="correct"> Misspelled URL<br>
+        <input type="checkbox" name="q2" value="wrong1"> Message from a friend without link<br>
+        <input type="checkbox" name="q2" value="wrong2"> Secure website warning<br>
+      </li>
+      <li>
+        What should you never share online?<br>
+        <input type="checkbox" name="q3" value="wrong1"> Your favorite color<br>
+        <input type="checkbox" name="q3" value="correct"> Your home address<br>
+        <input type="checkbox" name="q3" value="wrong2"> Your pet’s name<br>
+      </li>
+    </ol>
+    <button type="button" onclick="checkQuiz()">Submit</button>
+  </form>
+
+  <p id="quizResult"></p>
+
+  <section id="contact">
+    <h2>Contact Support</h2>
+    <p>Email: <a href="mailto:support@learnyourway.com">support@learnyourway.com</a></p>
+  </section>
+</div>
+
+<script>
+function checkQuiz(){
+  let score=0;
+  if(document.querySelector('input[name="q1"][value="correct"]').checked) score++;
+  if(document.querySelector('input[name="q2"][value="correct"]').checked) score++;
+  if(document.querySelector('input[name="q3"][value="correct"]').checked) score++;
+  document.getElementById('quizResult').innerText = "You scored "+score+" out of 3!";
+}
+</script>
+
+</body>
+</html>
