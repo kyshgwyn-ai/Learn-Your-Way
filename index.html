@@ -4,7 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn Your Way</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #FDF6EC;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #A3C4F3, #4DB6AC);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* Learning Ways */
+    .learning-ways {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .learning-ways h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .way-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .way-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .way-card h3 {
+      margin-top: 0.5rem;
+    }
+
+    .way-img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+    }
+
+    /* Modals */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background: #fff;
+      margin: 15% auto;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,40 +123,44 @@
     <h2>Five Ways to Learn</h2>
     <div class="ways-grid">
       <div class="way-card" data-modal="read">
-        <img src="icons/read.png" alt="Read Icon" class="way-img">
+        <img src="icons/read.png.jpg" alt="Read Icon" class="way-img">
         <h3>Read</h3>
       </div>
       <div class="way-card" data-modal="video">
-        <img src="icons/video.png" alt="Video Icon" class="way-img">
+        <img src="icons/video.png.jpg" alt="Video Icon" class="way-img">
         <h3>Video</h3>
       </div>
       <div class="way-card" data-modal="audio">
-        <img src="icons/audio.png" alt="Audio Icon" class="way-img">
+        <img src="icons/audio.png.jpg" alt="Audio Icon" class="way-img">
         <h3>Audio</h3>
       </div>
       <div class="way-card" data-modal="visuals">
-        <img src="icons/visuals.png" alt="Visuals Icon" class="way-img">
+        <img src="icons/visuals.png.jpg" alt="Visuals Icon" class="way-img">
         <h3>Visuals</h3>
       </div>
       <div class="way-card" data-modal="practice">
-        <img src="icons/practice.png" alt="Practice Icon" class="way-img">
+        <img src="icons/practice.png.jpg" alt="Practice Icon" class="way-img">
         <h3>Practice</h3>
       </div>
     </div>
   </section>
 
-  <!-- Modals for each learning format -->
-
-  <!-- READ -->
+  <!-- Modals -->
   <div id="read" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Read: Being an Information Literate Citizen</h2>
-      <p>Students explore ICT content responsibly, analyze sources, and evaluate information critically.</p>
+      <p>
+        Students explore ICT content responsibly, analyze sources, and evaluate information critically. Topics include:
+        <ul>
+          <li>Identifying credible sources online</li>
+          <li>Understanding copyright and plagiarism</li>
+          <li>Ethical use of digital information</li>
+        </ul>
+      </p>
     </div>
   </div>
 
-  <!-- VIDEO -->
   <div id="video" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -61,7 +169,6 @@
     </div>
   </div>
 
-  <!-- AUDIO -->
   <div id="audio" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -70,7 +177,6 @@
     </div>
   </div>
 
-  <!-- VISUALS -->
   <div id="visuals" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -79,7 +185,6 @@
     </div>
   </div>
 
-  <!-- PRACTICE -->
   <div id="practice" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -88,6 +193,31 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.way-card');
+    const modals = document.querySelectorAll('.modal');
+    const closeBtns = document.querySelectorAll('.close');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const modalId = card.dataset.modal;
+        const modal = document.getElementById(modalId);
+        if(modal) modal.style.display = 'block';
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', e => {
+      modals.forEach(modal => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    });
+  </script>
+
 </body>
 </html>
